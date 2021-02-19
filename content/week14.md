@@ -5,11 +5,14 @@ Git Search
 Git ships with a command called `grep` that allows you to easily search through any committed tree,
 the working directory, or even the index for a string or regular expression. 
 
-By default, git grep will look through the files in your working directory. As a first variation, you
-can use either of the -n or --line-number options to print out the line numbers where Git has found
-matches
+By default, `git grep` will look through the files in your working directory. As a first variation, you
+can use either of the `-n` (or `--line-number`) options to print out the line numbers where Git has found
+matches.
 
 `git grep` can also be used with the `-c` or `--count` flag to show how many matches there were in each file.
+
+Example:
+`git grep -c 'Exception' -- '*.java'` looks for `Exception` in all tracked `.java` files in the working directory and its subdirectories and displays a list with all the files in which `Exception` was found and the number of times it was found in each file.
 
 Git log search
 
